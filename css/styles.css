@@ -1,0 +1,220 @@
+.main-title {
+  font-size: 2rem;
+  color: #979797;
+  padding: 2rem 0;
+  border-bottom: 2px solid #000; }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+.gui-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem; }
+
+.gui-title {
+  color: #19A9D4;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #b0ccf2; }
+
+.btn-style {
+  border: 1px solid #d1d1d1;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 1rem;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(48%, #f9f9f9), color-stop(52%, #e2e2e2), color-stop(100%, #e7e7e7));
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: .8rem;
+  text-align: center; }
+  .btn-style:hover {
+    border-color: #b0ccf2;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e4f3ff), color-stop(48%, #d9edff), color-stop(52%, #c2d8f2), color-stop(100%, #c6dcf6));
+    color: #000;
+    text-decoration: none; }
+  .btn-style.state-disabled {
+    opacity: .5;
+    pointer-events: none; }
+    .btn-style.state-disabled:hover {
+      background-image: transparent;
+      color: #000; }
+  .btn-style--secondary {
+    padding: .5rem 1rem; }
+
+/* tabla horarios */
+table {
+  width: 100%;
+  border: 1px solid #000;
+  background-color: #fff; }
+
+th, td {
+  width: 25%;
+  text-align: center;
+  vertical-align: top;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding: 0.3em; }
+
+caption {
+  padding: 0.3em; }
+
+.form-control {
+  font-size: .8rem; }
+
+label {
+  margin: 0; }
+
+.btn-combobox {
+  font-size: .8rem;
+  background-color: gainsboro;
+  color: #000;
+  width: 100%; }
+  .btn-combobox:hover {
+    background-color: gainsboro;
+    color: #000; }
+
+/* Cita medica */
+.group-1 .section-1 {
+  padding: 1rem;
+  border: 1px solid #6c757d;
+  border-top: none;
+  margin-bottom: 1.5rem; }
+  .group-1 .section-1 .section-part-1 {
+    width: 70%; }
+  .group-1 .section-1 .section-part-2 {
+    _width: 30%;
+    width: 20%;
+    margin-left: auto; }
+    .group-1 .section-1 .section-part-2 .btn-patient {
+      margin-bottom: 1rem; }
+  .group-1 .section-1 .form-column-1 {
+    width: 70%;
+    margin-right: 2rem; }
+    .group-1 .section-1 .form-column-1 label {
+      width: 10rem;
+      font-size: .8rem; }
+  .group-1 .section-1 .form-column-2 {
+    width: 40%; }
+    .group-1 .section-1 .form-column-2 label {
+      width: 6rem;
+      font-size: .8rem; }
+
+.group-1 .section-2 {
+  padding: 1rem;
+  border: 1px solid #6c757d;
+  border-top: none;
+  margin-bottom: 1.5rem; }
+  .group-1 .section-2 .section-part-1 {
+    margin-right: 1rem;
+    width: 40%; }
+  .group-1 .section-2 .section-part-2 {
+    width: 60%;
+    background-color: gray; }
+    .group-1 .section-2 .section-part-2 .timetable-row {
+      cursor: pointer;
+      font-size: .9rem; }
+      .group-1 .section-2 .section-part-2 .timetable-row:hover {
+        background-color: gainsboro; }
+  .group-1 .section-2 .form-column-1 .dropdown {
+    width: 100%; }
+  .group-1 .section-2 .form-column-2 td, .group-1 .section-2 .form-column-2 th {
+    border: 1px solid gray; }
+  .group-1 .section-2 label {
+    font-size: .8rem;
+    width: 7rem; }
+
+.group-1 .section-3 {
+  padding: 1rem;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  .group-1 .section-3 .btn-style {
+    width: 10rem;
+    display: inline-block; }
+
+#container-main-menu .menu-options {
+  padding-top: 1rem; }
+
+/* historia clinica */
+#container-clinic-history .group-1 {
+  position: relative; }
+
+#container-clinic-history .section-1 {
+  width: 70%; }
+  #container-clinic-history .section-1 .section-part-1 {
+    width: 100%; }
+  #container-clinic-history .section-1 .section-part-2 .btn-style {
+    padding: .5rem 1rem;
+    margin-bottom: 0; }
+  #container-clinic-history .section-1 .form-column-1 {
+    width: 90%;
+    margin: 0; }
+
+#container-clinic-history .section-2 {
+  width: 70%; }
+  #container-clinic-history .section-2 .section-part-1 {
+    width: 100%; }
+  #container-clinic-history .section-2 .form-column-1 {
+    width: 77%; }
+    #container-clinic-history .section-2 .form-column-1 label {
+      width: 10rem; }
+
+#container-clinic-history .section-3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 2rem; }
+  #container-clinic-history .section-3 .btn-style {
+    margin-bottom: 1rem; }
+
+#container-clinic-history .gender-group .form-control,
+#container-clinic-history .gender-group .input-group-prepend {
+  background-color: #fff; }
+
+/* comprobante de pago */
+#container-proof-payment .section-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 1rem; }
+  #container-proof-payment .section-header .form-group {
+    width: 40%;
+    margin: 0; }
+    #container-proof-payment .section-header .form-group label {
+      font-size: .8rem;
+      width: 15rem; }
+
+#container-proof-payment .section-dates {
+  padding: 1rem; }
+  #container-proof-payment .section-dates p {
+    font-size: .9rem;
+    margin-right: 1.5rem; }
+  #container-proof-payment .section-dates span {
+    font-weight: bold; }
+
+#container-proof-payment .section-1 .section-part-1 .form-column-1 {
+  width: 85%; }
+
+#container-proof-payment .section-1 .section-part-2 {
+  margin: 0;
+  width: 30%; }
+  #container-proof-payment .section-1 .section-part-2 .btn-style {
+    margin: 0;
+    padding: .5rem 1rem; }

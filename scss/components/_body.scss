@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.gui-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.gui-title {
+    color: $turquesa;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $sky;
+}
+
+.btn-style {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 1rem;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(48%, #f9f9f9), color-stop(52%, #e2e2e2), color-stop(100%, #e7e7e7));
+    color: $black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: .8rem;
+    text-align: center;
+    &:hover {
+        border-color: $sky;
+        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e4f3ff), color-stop(48%, #d9edff), color-stop(52%, #c2d8f2), color-stop(100%, #c6dcf6));
+        color: $black;
+        text-decoration: none;    
+    }
+    &.state-disabled {
+        opacity: .5;
+        pointer-events: none;
+        &:hover {
+            background-image: transparent;
+            color: $black;
+        }
+    }
+    &--secondary {
+        padding: .5rem 1rem;
+    }
+}
+
+/* tabla horarios */
+table {
+    width: 100%;
+    border: 1px solid $black;
+    background-color: $white;
+ }
+ th, td {
+    width: 25%;
+    text-align: center;
+    vertical-align: top;
+    border: 1px solid $black;
+    border-collapse: collapse;
+    padding: 0.3em;
+ }
+ caption {
+    padding: 0.3em;
+ }
+
+ .form-control {
+    font-size: .8rem;
+ }
+
+ label {
+     margin: 0;
+ }
+
+ .btn-combobox {
+    font-size: .8rem;
+    background-color: gainsboro;
+    color: $black;
+    width: 100%;
+    &:hover {
+        background-color: gainsboro;
+        color: $black;
+    }
+ }
+
+/* Cita medica */
+.group-1 {
+    .section-1 {
+        padding: 1rem;
+        border: 1px solid $border-group;
+        border-top: none;
+        margin-bottom: 1.5rem;
+        .section-part-1 {
+            width: 70%;
+        }
+        .section-part-2 {
+            _width: 30%;
+            width: 20%;
+            margin-left: auto;
+            .btn-patient {
+                margin-bottom: 1rem;
+            }
+        }
+        .form-column-1 {
+            width: 70%;
+            margin-right: 2rem;
+            label {
+                width: 10rem;
+                font-size: .8rem;
+            }
+        }
+        .form-column-2 {
+            width: 40%;
+            label {
+                width: 6rem;
+                font-size: .8rem;
+            }
+        }
+    }
+    .section-2 {
+        padding: 1rem;
+        border: 1px solid $border-group;
+        border-top: none;
+        margin-bottom: 1.5rem;
+        .section-part-1 {
+            margin-right: 1rem;
+            width: 40%;
+        }
+        .section-part-2 {
+            width: 60%;
+            background-color: gray;
+            .timetable-row {
+                cursor: pointer;
+                font-size: .9rem;
+                &:hover {
+                    background-color: gainsboro;
+                }
+            }
+        }
+        .form-column-1 {
+            .dropdown {
+                width: 100%;
+            }
+        }
+        .form-column-2 {
+            td, th {
+                border: 1px solid gray;
+            }
+        }
+        label {
+            font-size: .8rem;
+            width: 7rem;
+        }
+    }
+    .section-3 {
+        padding: 1rem;
+        justify-content: space-around;
+        .btn-style {
+            width: 10rem;
+            display: inline-block;
+        }
+    }
+}
+
+#container-main-menu {
+    .menu-options {
+        padding-top: 1rem;
+    }
+}
+
+/* historia clinica */
+#container-clinic-history {
+    .group-1 {
+        position: relative;
+    }
+    .section-1 {
+        width: 70%;
+        .section-part-1 {
+            width: 100%;
+        }
+        .section-part-2 {
+            .btn-style {
+                padding: .5rem 1rem;
+                margin-bottom: 0;
+            }
+        }
+        .form-column-1 {
+            width: 90%;
+            margin: 0;
+        }
+    }
+    .section-2 {
+        width: 70%;
+        .section-part-1 {
+            width: 100%;
+        }
+        .form-column-1 {
+            width: 77%;
+            label {
+                width: 10rem;
+            }
+        }
+    }
+    .section-3 {
+        width: fit-content;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-top: 2rem;
+        .btn-style {
+            margin-bottom: 1rem;
+        }
+    }
+    .gender-group {
+        .form-control,
+        .input-group-prepend {
+            background-color: $white;
+        }
+    }
+}
+
+/* comprobante de pago */
+#container-proof-payment {
+    .section-header {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem;
+        .form-group {
+            width: 40%;
+            margin: 0;
+            label {
+                font-size: .8rem;
+                width: 15rem;
+            }
+        }
+    }
+    .section-dates {
+        padding: 1rem;
+        p {
+            font-size: .9rem;
+            margin-right: 1.5rem;
+        }
+        span {
+            font-weight: bold;
+        }
+    }
+    .section-1 {
+        .section-part-1 {
+            .form-column-1 {
+                width: 85%;
+            }
+        }
+        .section-part-2 {
+            margin: 0;
+            width: 30%;
+            .btn-style {
+                margin: 0;
+                padding: .5rem 1rem;
+            }
+        }
+    }
+}

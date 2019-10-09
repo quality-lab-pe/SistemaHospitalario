@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sistema Hospitalario</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="main-title">Sistema Hospitalario Cayetano Heredia</h1>
+            </div>
+        </div>
+    </div>
+    <main class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="container-main-menu" class="gui-container">
+                    <h3 class="gui-title">Menú Principal</h3>
+                    <div class="menu-options d-flex justify-content-around">
+                        <a id="btnMedicalAppointments" class="btn-style" href="#citas">Generar Cita Médica</a>
+                        <a id="btnClinicHistory" class="btn-style" href="#mantenimiento">Mantenimiento de Historia Clínica</a>
+                        <a id="btnProofPayment" class="btn-style" href="#comprobante">Generar Comprobante de Pago</a>  
+                    </div>
+                </div>
+                <div id="container-medical-appointments" class="gui-container d-none">
+                    <h3 class="gui-title">Generar Cita Médica</h3>
+                    <div class="group-1 d-flex flex-column justify-content-center">
+                        <h5>Datos del Paciente</h5>
+                        <div class="section-1 d-flex">
+                            <div class="section-part-1">
+                                <form class="d-flex">
+                                    <div class="form-column-1">
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="inputDni">Doc. Identidad</label>
+                                            <input type="number" class="form-control" id="inputDni">
+                                            <small id="emailHelp" class="form-text text-muted"></small>
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="inputName">Nombres</label>
+                                            <input type="text" class="form-control" id="inputName">
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="inputLastName">Apellidos</label>
+                                            <input type="text" class="form-control" id="inputLastName">
+                                        </div>
+                                    </div>
+                                    <div class="form-column-2">
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="inputHC">N° HC</label>
+                                            <input type="number" class="form-control" id="inputHC">
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="inputSis">SIS</label>
+                                            <input type="text" class="form-control" id="inputSis">
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="inputGender">Género</label>
+                                            <input type="text" class="form-control" id="inputGender">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="section-part-2 d-flex flex-column">
+                                <a class="btn-patient btn-style">Buscar Paciente</a>
+                                <a class="btn-sis btn-style">Buscar SIS</a>                                
+                            </div>
+                        </div>
+                        <h5>Datos de la Cita</h5>
+                        <div class="section-2 d-flex">
+                            <div class="section-part-1">
+                                <form class="">
+                                    <div class="form-column-1">
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="inputAppoint">N° Cita</label>
+                                            <input type="number" class="form-control" id="inputAppoint">
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="">Especialidad</label>
+                                            <div class="dropdown">
+                                                <button class="btn btn-secondary dropdown-toggle btn-combobox" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Seleccionar especialidad
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="#">Cardiología</a>
+                                                    <a class="dropdown-item" href="#">Medicina General</a>
+                                                    <a class="dropdown-item" href="#">Nutrición</a>
+                                                    <a class="dropdown-item" href="#">Psicología</a>
+                                                    <a class="dropdown-item" href="#">Traumatología</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="">Médico</label>
+                                            <div class="dropdown">
+                                                <button class="btn btn-secondary dropdown-toggle btn-combobox" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Seleccionar doctor
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="#">Doctor A</a>
+                                                    <a class="dropdown-item" href="#">Doctor B</a>
+                                                    <a class="dropdown-item" href="#">Doctor C</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="inputDate">Fecha</label>
+                                            <input type="text" class="form-control" id="inputDate">
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="inputHour">Hora</label>
+                                            <input type="text" class="form-control" id="inputHour">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="section-part-2 d-flex flex-column">
+                                <table>
+                                    <tr>
+                                        <th scope="col">N° Orden</th>
+                                        <th scope="col">Médico</th>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col">Hora</th>
+                                        <th scope="col">Consultorio</th>
+                                    </tr>
+                                    <tr class="timetable-row">
+                                        <td>5/10</td>
+                                        <td>Doctor A</td>
+                                        <td>12/12/19</td>
+                                        <td>10:30</td>
+                                        <td>CRON1</td>
+                                    </tr>
+                                    <tr class="timetable-row">
+                                        <td>2/15</td>
+                                        <td>Doctor B</td>
+                                        <td>10/11/19</td>
+                                        <td>08:30</td>
+                                        <td>CRON2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="section-3 d-flex">
+                            <a class="btn-exit btn-style">Salir</a>
+                            <a class="btn-style">Registrar</a>
+                            <a class="btn-style">Cancelar</a>
+                            <a class="btn-style state-disabled">Imprimir</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="container-clinic-history" class="gui-container d-none">
+                    <h3 class="gui-title">Mantenimiento Historia Clínica</h3>
+                    <div class="group-1 d-flex flex-column justify-content-center">
+                        <h5>Datos del Paciente</h5>
+                        <div class="section-1 d-flex">
+                            <div class="section-part-1">
+                                <form class="d-flex">
+                                    <div class="form-column-1">
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="inputDni">Doc. Identidad</label>
+                                            <input type="number" class="form-control" id="inputDni">
+                                            <small id="emailHelp" class="form-text text-muted"></small>
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="inputName">Nombres</label>
+                                            <input type="text" class="form-control" id="inputName">
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="inputLastName">Apellidos</label>
+                                            <input type="text" class="form-control" id="inputLastName">
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="inputLastName">Fecha de Nac.</label>
+                                            <input type="text" class="form-control" id="inputLastName">
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="inputLastName">Género</label>
+                                            <div class="d-flex gender-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">
+                                                        <input type="radio">
+                                                        </div>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="Femenino" disabled>
+                                                </div>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">
+                                                        <input type="radio">
+                                                        </div>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="Masculino" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="inputLastName">Dirección</label>
+                                            <input type="text" class="form-control" id="inputLastName">
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="inputLastName">Teléfono</label>
+                                            <input type="text" class="form-control" id="inputLastName">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="section-part-2 d-flex flex-column">
+                                <a class="btn-patient btn-style">Buscar</a>
+                            </div>
+                        </div>
+                        <h5>Datos de la Historia Clínica</h5>
+                        <div class="section-2 d-flex">
+                            <div class="section-part-1">
+                                <form class="">
+                                    <div class="form-column-1">
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="">N° HC</label>
+                                            <input type="number" class="form-control" id="">
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="">Fecha de Registro</label>
+                                            <input type="text" class="form-control" id="">
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="">Gpo. Sanguíneo</label>
+                                            <input type="text" class="form-control" id="">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="section-3 d-flex flex-column">
+                            <a class="btn-style">Actualizar</a>
+                            <a class="btn-style">Registrar</a>
+                            <a class="btn-style">Cancelar</a>
+                            <a class="btn-style state-disabled">Imprimir</a>
+                            <a class="btn-exit btn-style">Salir</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="container-proof-payment" class="gui-container d-none">
+                    <h3 class="gui-title">Generar Comprobante de Pago</h3>
+                    <div class="group-1 d-flex flex-column justify-content-center">
+                        <div class="section-header">
+                            <div class="form-group d-flex align-items-center">
+                                <label for="">N° de Comprobante</label>
+                                <input type="number" class="form-control" id="">
+                            </div>
+                        </div>
+                        <div class="section-dates d-flex">
+                            <p>Fecha de Emisión: <span class="d-date"></span></p>
+                            <p>Hora de Emisión: <span class="d-hour"></span></p>
+                        </div>
+                        <div class="section-1 d-flex">
+                            <div class="section-part-1">
+                                <form class="d-flex">
+                                    <div class="form-column-1">
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="">N° de Cita</label>
+                                            <input type="number" class="form-control" id="">
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="">Paciente</label>
+                                            <input type="text" class="form-control" id="">
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="">Especialidad</label>
+                                            <input type="text" class="form-control" id="">
+                                        </div>
+                                        <div class="form-group d-flex align-items-center">
+                                            <label for="">Monto a Pagar (S/)</label>
+                                            <input type="text" class="form-control" id="">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="section-part-2 d-flex flex-column">
+                                <a class="btn-patient btn-style">Buscar Cita</a>
+                            </div>
+                        </div>
+                        <div class="section-3 d-flex">
+                            <a class="btn-exit btn-style">Salir</a>
+                            <a class="btn-style state-disabled">Registrar</a>
+                            <a class="btn-style state-disabled">Imprimir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>
