@@ -81,9 +81,6 @@ label {
   background-color: gainsboro;
   color: #000;
   width: 100%; }
-  .btn-combobox:hover {
-    background-color: gainsboro;
-    color: #000; }
 
 /* Cita medica */
 .group-1 .section-1 {
@@ -162,13 +159,29 @@ label {
     margin: 0; }
 
 #container-clinic-history .section-2 {
-  width: 70%; }
+  width: 70%;
+  margin-bottom: 15rem; }
   #container-clinic-history .section-2 .section-part-1 {
     width: 100%; }
   #container-clinic-history .section-2 .form-column-1 {
     width: 77%; }
     #container-clinic-history .section-2 .form-column-1 label {
       width: 10rem; }
+    #container-clinic-history .section-2 .form-column-1 .btn-combobox {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 70%; }
 
 #container-clinic-history .section-3 {
   width: -webkit-fit-content;
@@ -218,3 +231,17 @@ label {
   #container-proof-payment .section-1 .section-part-2 .btn-style {
     margin: 0;
     padding: .5rem 1rem; }
+
+.msj-success {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 2px solid #155724;
+  padding: 1.5rem;
+  position: absolute;
+  top: 38%;
+  right: 26%; }

@@ -87,8 +87,8 @@ table {
     color: $black;
     width: 100%;
     &:hover {
-        background-color: gainsboro;
-        color: $black;
+        // background-color: gainsboro;
+        // color: $black;
     }
  }
 
@@ -200,6 +200,7 @@ table {
     }
     .section-2 {
         width: 70%;
+        margin-bottom: 15rem;
         .section-part-1 {
             width: 100%;
         }
@@ -207,6 +208,13 @@ table {
             width: 77%;
             label {
                 width: 10rem;
+            }
+            .btn-combobox {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 70%;
             }
         }
     }
@@ -268,4 +276,15 @@ table {
             }
         }
     }
+}
+
+.msj-success {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    border: 2px solid #155724;
+    padding: 1.5rem;
+    position: absolute;
+    top: 38%;
+    right: 26%;
 }
