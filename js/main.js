@@ -44,6 +44,18 @@
             //Salir - generar cita
             $('#selectSpec').empty();
             $('#selectSpec').append('<option selected>Seleccionar especialidad...</option>');
+            $containerMedicalAppointments.find('#inputDni').val('');
+            $containerMedicalAppointments.find('#inputName').val('');
+            $containerMedicalAppointments.find('#inputLastName').val('');
+            $containerMedicalAppointments.find('#inputHC').val('');
+            $containerMedicalAppointments.find('#inputSis').val('');
+            $containerMedicalAppointments.find('#inputGender').val('');
+            $containerMedicalAppointments.find('#inputAppoint').val('');
+            $containerMedicalAppointments.find('#inputDate').val('');
+            $containerMedicalAppointments.find('#inputHour').val('');
+            $containerMedicalAppointments.find('#selectSpec').prop('selectedIndex',0);
+            $containerMedicalAppointments.find('#selectDoc').prop('selectedIndex',0);
+            $containerMedicalAppointments.find('tbody').children().not('tr:first').remove();
         });
 
         /*----------------------------------GENERAR CITA--------------------------------------*/
@@ -143,6 +155,18 @@
             var valAppoint = $('#inputAppoint').val();
             if ($('#inputAppoint').val() !== '' && $('#inputDni').val() !== '') {
                 alert( 'Cita generada con el Nro. ' + valAppoint );
+                $containerMedicalAppointments.find('#inputDni').val('');
+                $containerMedicalAppointments.find('#inputName').val('');
+                $containerMedicalAppointments.find('#inputLastName').val('');
+                $containerMedicalAppointments.find('#inputHC').val('');
+                $containerMedicalAppointments.find('#inputSis').val('');
+                $containerMedicalAppointments.find('#inputGender').val('');
+                $containerMedicalAppointments.find('#inputAppoint').val('');
+                $containerMedicalAppointments.find('#inputDate').val('');
+                $containerMedicalAppointments.find('#inputHour').val('');
+                $containerMedicalAppointments.find('#selectSpec').prop('selectedIndex',0);
+                $containerMedicalAppointments.find('#selectDoc').prop('selectedIndex',0);
+                $containerMedicalAppointments.find('tbody').children().not('tr:first').remove();
             }
         });
 
